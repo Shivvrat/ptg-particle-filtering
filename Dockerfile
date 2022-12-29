@@ -1,6 +1,5 @@
 FROM condaforge/mambaforge:4.10.3-1
 MAINTAINER Shivvrat shivvrat.arya@utdallas.edu
-
 RUN mamba install -c anaconda \
     numpy \
     jupyterlab \
@@ -10,6 +9,5 @@ RUN apt-get install -qq -y --no-install-recommends \
     git \
     wget
 RUN git clone https://github.com/Shivvrat/ptg-particle-filtering.git
-RUN cd ptg-particle-filtering/project/
-#RUN python pf/setup.py build_ext --inplace
+WORKDIR ptg-particle-filtering/project/
 CMD ["jupyter-lab","--ip=0.0.0.0","--no-browser","--allow-root"]
