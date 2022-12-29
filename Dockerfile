@@ -13,6 +13,6 @@ RUN apt -y -qq install --reinstall gcc
 RUN git clone https://github.com/Shivvrat/ptg-particle-filtering.git
 WORKDIR /project/ptg-particle-filtering/project
 RUN python pf/setup.py build_ext --inplace
+CMD ["jupyter-lab","--ip=0.0.0.0","--no-browser","--allow-root", "--ContentsManager.allow_hidden=True"]
 
 #RUN #papermill ParticleFiltering.ipynb output.ipynb
-#CMD ["jupyter-lab","--ip=0.0.0.0","--no-browser","--allow-root"]

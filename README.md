@@ -4,8 +4,8 @@ E.g. - "Recipe B: Pour-over Coffee" from the PTG Cookbook
 
 ## Steps to create the dependency graph - 
 1. First we divide the steps into smaller sub-steps (But if the steps in the recipe are small enough you can skip this step). For example -  
-**STEP** - 
-Use a butter knife to scoop nut butter from the jar. Spread nut butter onto tortilla, leaving 1/2-inch uncovered at the edges
+	**STEP** - 
+	Use a butter knife to scoop nut butter from the jar. Spread 	nut butter onto tortilla, leaving 1/2-inch uncovered at the 	edges
 
 	**SUB-STEPS**
 	1. Take butter knife
@@ -13,10 +13,10 @@ Use a butter knife to scoop nut butter from the jar. Spread nut butter onto tort
 	3. Scoop nut butter from butter jar using butter knife
 	4. Spread nut butter on tortilla
 
-	This helps us to create better dependencies and the (atomic) sub-steps helps us to train a better feature extractor (since we have more fine-grained activities).
+	This helps us to create better dependencies and the (**atomic**) sub-steps helps us to train a better feature extractor (since we have more fine-grained activities).
 
 2. For all the sub-steps we need figure out the sub-steps that are required to be finished before we can start the current sub-step.
-For the sub-steps shown above, we can do 1 and 2 in any order, but to accomplish 3 we need to first complete the first two. 
+For the sub-steps shown above, we can perform 1 and 2 in any order, but to accomplish 3 we need to first complete the first two. 
 
 This gives us a **dependeny graph** of the recipe sub-steps - a graph which shows the order of the steps and if we parse this graph in a topological order it would give us an ordering which would represent the recipe being performed correctly. 
 
