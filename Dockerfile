@@ -10,4 +10,4 @@ RUN apt-get install -qq -y --no-install-recommends \
     wget
 RUN git clone https://github.com/Shivvrat/ptg-particle-filtering.git
 WORKDIR ptg-particle-filtering/project/
-CMD ["jupyter-notebook","--ip=0.0.0.0","--no-browser","--allow-root"]
+#CMD ["jupyter-lab","--ip=0.0.0.0","--no-browser","--allow-root"]
