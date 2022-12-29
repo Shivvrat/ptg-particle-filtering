@@ -15,4 +15,11 @@ When you run the second command the you will see the jupyter-lab URL in the term
 2. After that please select the recipe you want to run the code for in the second cell. (The options are given as a comment on the right)
 3. All the data and other parts of the code are loaded automatically.
 4. Please run all the cells in the jupyter-lab
-5. You should see the output of the PF model in the last cell 
+5. The output of the PF model should be printed in the last cell. (We also print some other useful information in the last cell)
+
+# What does the output represent - 
+- The size of the output will be |number of sub-steps|.
+- Each value represents the state of the sub-step at the current time stamp. 
+- The values that the state can take are - 
+  - ```0``` - If the sub-step is not done.
+  - ```1``` - If the sub-step has been finished.  

@@ -1,4 +1,4 @@
-# Graph Creation
+# Graph Creation (Represented as ```edges``` in the code)
 Input - A recipe with mulitple steps.
 E.g. - "Recipe B: Pour-over Coffee" from the PTG Cookbook
 
@@ -36,14 +36,16 @@ There are a few important patterns that we saw while creating the graph -
 2. There might be cases where consecutive steps might not be dependent on each other, but eventually there would be a step which would be dependent on the given step. 
 3. Adding sub-steps when we change steps helps stabalize the particle filtering code. 
 
-# Critical Mask
+# Critical Mask (Represented as ```critical_mask``` in the code)
 We also classify each sub-step into critical and non-critical categories. 
 
 A **critical sub-step** is essential for its corresponding step to be finished. In the example given above sub-step 3 and sub-step 4 are the critical sub-steps (since we can already have the knife and butter jar in hand or nearby, but scooping the butter and spreading it on the tortilla is necessary for the success of this step) for the given step. 
 
-# Step Array
+# Step Array (Represented as ```step_array``` in the code)
 The step array comprises of the index of the first and last sub-steps for a given step. The size of the step array would be |Number of Steps| * 2, since we will have start and end sub-step indices for each step. 
 
+# Outputs of the feature extractor (Represented as ```dataset``` in the code)
+This array stores the output of the feature extractor which is then used to update the states of the dynamic probabilistic graphical model. 
 
 # Steps and their corresponding Sub-Steps for the Recipes from PTG Cookbook- 
 ## Recipe A: Pinwheels
