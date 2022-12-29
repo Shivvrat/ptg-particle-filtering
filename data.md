@@ -36,8 +36,6 @@ There are a few important patterns that we saw while creating the graph -
 2. There might be cases where consecutive steps might not be dependent on each other, but eventually there would be a step which would be dependent on the given step. 
 3. Adding sub-steps when we change steps helps stabalize the particle filtering code. 
 
-
-
 # Critical Mask
 We also classify each sub-step into critical and non-critical categories. 
 
@@ -47,7 +45,7 @@ A **critical sub-step** is essential for its corresponding step to be finished. 
 The step array comprises of the index of the first and last sub-steps for a given step. The size of the step array would be |Number of Steps| * 2, since we will have start and end sub-step indices for each step. 
 
 
-# Steps and Sub-Steps for the Recipes from PTG Cookbook- 
+# Steps and their corresponding Sub-Steps for the Recipes from PTG Cookbook- 
 ## Recipe A: Pinwheels
 For this recipe we divided the step 11 into further steps to make the process easier. 
 
