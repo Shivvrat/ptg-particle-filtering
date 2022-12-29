@@ -4,7 +4,7 @@ RUN mamba install -c anaconda \
     numpy \
     jupyterlab \
     cython
-RUN #apt-get update && apt-get -y upgrade
+RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -qq -y --no-install-recommends \
     git \
     wget
